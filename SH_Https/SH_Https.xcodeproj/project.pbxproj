@@ -15,6 +15,7 @@
 		81019E041E077652006F390F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81019E021E077652006F390F /* LaunchScreen.storyboard */; };
 		81019E0F1E077652006F390F /* SH_HttpsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81019E0E1E077652006F390F /* SH_HttpsTests.m */; };
 		81019E1A1E077652006F390F /* SH_HttpsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81019E191E077652006F390F /* SH_HttpsUITests.m */; };
+		8DA2E6B5B8687AD18075BF14 /* libPods-SH_Https.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191E680E56283207A89A71FD /* libPods-SH_Https.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D6311AFA41565169F08C88 /* Pods-SH_Https.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SH_Https.release.xcconfig"; path = "Pods/Target Support Files/Pods-SH_Https/Pods-SH_Https.release.xcconfig"; sourceTree = "<group>"; };
+		191E680E56283207A89A71FD /* libPods-SH_Https.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SH_Https.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81019DF11E077652006F390F /* SH_Https.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SH_Https.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81019DF51E077652006F390F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81019DF71E077652006F390F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		81019E151E077652006F390F /* SH_HttpsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SH_HttpsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81019E191E077652006F390F /* SH_HttpsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SH_HttpsUITests.m; sourceTree = "<group>"; };
 		81019E1B1E077652006F390F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D6B2F310E4071269CFE44E /* Pods-SH_Https.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SH_Https.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SH_Https/Pods-SH_Https.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA2E6B5B8687AD18075BF14 /* libPods-SH_Https.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15E6974DA45F390B0579EF35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				191E680E56283207A89A71FD /* libPods-SH_Https.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81019DE81E077652006F390F = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				81019E0D1E077652006F390F /* SH_HttpsTests */,
 				81019E181E077652006F390F /* SH_HttpsUITests */,
 				81019DF21E077652006F390F /* Products */,
+				E796B81D4F8867B377E00697 /* Pods */,
+				15E6974DA45F390B0579EF35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = SH_HttpsUITests;
 			sourceTree = "<group>";
 		};
+		E796B81D4F8867B377E00697 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6D6B2F310E4071269CFE44E /* Pods-SH_Https.debug.xcconfig */,
+				02D6311AFA41565169F08C88 /* Pods-SH_Https.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81019E1E1E077652006F390F /* Build configuration list for PBXNativeTarget "SH_Https" */;
 			buildPhases = (
+				EE7DF36CE4B25D3962B241D7 /* [CP] Check Pods Manifest.lock */,
 				81019DED1E077652006F390F /* Sources */,
 				81019DEE1E077652006F390F /* Frameworks */,
 				81019DEF1E077652006F390F /* Resources */,
+				FBB3800F14DAF7AEC48F03DE /* [CP] Embed Pods Frameworks */,
+				5B6D2BDABF441A4E3F876991 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B6D2BDABF441A4E3F876991 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SH_Https/Pods-SH_Https-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7DF36CE4B25D3962B241D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB3800F14DAF7AEC48F03DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SH_Https/Pods-SH_Https-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81019DED1E077652006F390F /* Sources */ = {
@@ -422,6 +497,7 @@
 		};
 		81019E1F1E077652006F390F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6D6B2F310E4071269CFE44E /* Pods-SH_Https.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SH_Https/Info.plist;
@@ -433,6 +509,7 @@
 		};
 		81019E201E077652006F390F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02D6311AFA41565169F08C88 /* Pods-SH_Https.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SH_Https/Info.plist;

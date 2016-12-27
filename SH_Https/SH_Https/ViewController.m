@@ -24,6 +24,19 @@
 #pragma mark - AFN的HTTPS请求
 - (void)afnTest
 {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 更改解析方式
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 设置对证书的处理方式
+    [manager GET:@"https://kyfw.12306.cn/otn/" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"error:%@",error);
+    }];
     
 }
 
